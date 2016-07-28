@@ -1,7 +1,7 @@
 proc HAroute_Connect_all {args} {
     LogMsg "TRACE([set myName [myname]]): Calledby [calledby]"	
 	LogMsg "Info($myName): Start connecting to all the devices"
-	LogMsg "##########################################################"
+	LogMsg "##########################################################"             
 	
 	global DUT_IP cmtsSmm6IP cmtsSmm7IP cmtsIP DUT_ETH0_IP DUT2_IP R1_ip R2_ip R3_ip R4_ip switch_ip101 switch_ip202 server_ip timeout debug PE1 PE2
 	
@@ -76,7 +76,7 @@ proc HAroute_show_route_summary {args} {
     }
     set args [join $args]
     if ![regexp -- ^$ $args] {
-        regsub -all -- ¨C $args - args   ;
+        regsub -all -- Â¨C $args - args   ;
         set arg_list [xsplit $args " -"];
         foreach a $arg_list {
             switch -re -- [string tolower [string trimleft $a -]] {
@@ -158,7 +158,7 @@ proc HAroute_mplsl2vpn_config {args} {
     }
     set args [join $args]
     if ![regexp -- ^$ $args] {
-        regsub -all -- ¨C $args - args   ;
+        regsub -all -- Â¨C $args - args   ;
         set arg_list [xsplit $args " -"];
         foreach a $arg_list {
             switch -re -- [string tolower [string trimleft $a -]] {
